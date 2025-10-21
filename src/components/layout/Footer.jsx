@@ -9,7 +9,7 @@ function Footer() {
                 textAlign: "center", 
                 marginTop: "20px" 
             }}> 
-            <p>&copy; 2025 - Mi Aplicación React</p> 
+            <p>&copy; 2025 - Mi Aplicación React JS - Ricardo Balsimelli</p> 
         </footer> 
     ); 
 };
