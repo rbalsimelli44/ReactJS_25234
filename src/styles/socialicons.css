@@ -1,0 +1,14 @@
+.social-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.social-icon.facebook {
+  color: #3b5998;
+}

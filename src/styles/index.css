@@ -1,0 +1,334 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  background-color: darkgreen;
+  color: yellow;
+} 
+
+h1 {
+  font-size: 3.5em;
+  line-height: 1.1;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+li, h2, h3 {
+  text-align: left;
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: white;
+  background-color: blue;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+#btn1 {
+  background-color: red;
+  padding: 10px 30px;
+}
+
+#btn2 {
+  background-color: darkorange;
+  padding: 10px 30px;
+}
+
+#btn3 {
+  background-color: black;
+  padding: 10px 30px;
+}
+
+button:hover {
+  border-color: yellow;
+  background-color: blueviolet;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.contenedor-flex {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+}
+
+/* ===== Navbar ===== */
+nav {
+  background-color: black;
+  padding: 0.75rem 1rem;
+  box-shadow: 0px 0px 2px 1px black;
+}
+
+/* El contenedor principal del menú */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* reparte los ítems */
+  align-items: center; /* centra verticalmente */
+  flex-wrap: wrap; /* permite que se rompa en varias líneas en pantallas pequeñas */
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cada elemento del menú */
+nav li {
+  display: inline-block;
+}
+
+/* Los enlaces dentro del menú */
+nav a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* apila los elementos */
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* ===== Productos  ===== */
+
+#lista-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+#lista-productos li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkolivegreen;
+  color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los opiniones */
+.grilla-opiniones {
+    display: grid;
+    width: 85vw;
+    height: 75vh;
+    margin: auto;
+    padding: 1em;
+    grid-template-columns: repeat(3, minmax(min(100%,20vw), 1fr));
+    grid-template-rows: auto;
+    gap: 2em;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.opiniones {
+    background-color: #aae9aa;
+    padding: 0,5em;
+    border-radius: 25%;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    min-width: 80px;
+    min-height: 20px;
+}
+
+.opiniones:hover{
+    border: 1px solid orange;
+    transform: translateY(-5px);
+    background-color: #72e972;
+}
+
+.opiniones h4 {
+    margin-bottom: 10px;
+    color: darkorange;
+    /* font-size: 2.5vw; */
+}
+
+.opiniones p{
+    font-weight: bolder;
+    /* font-size: 2vw; */
+}
+
+/* Formulario de contacto */
+.grilla-contactos{
+    display: grid;
+    width: 95vw;
+    height: 85vh;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,40vw), 1fr));
+    grid-template-rows: auto;
+    gap: 0.5em;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.contenedor-contactos{
+    background-color: black;
+    border-radius: 5%;
+    color: white;
+    text-align: center;
+    gap: 1px;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+    padding: 1em;
+  }
+
+.formulario{
+    background-color: #d87504;
+    font-weight: bolder;
+    color: white;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 2vw;
+}
+
+.formulario-contacto label {
+    text-align: left;
+    height: 0.8vh;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 1vh;
+    border: 1px solid #ccc;
+    font-size: 0.8rem;
+}
+
+.formulario-contacto button{
+    background-color: lightgreen;
+    padding: 1vh;
+    border: none;
+    border-radius: 25%;
+    cursor: pointer;
+    font-size: 0.8rem;
+    width: 10vw;
+    /* justify-content: right;  */   /*revisar, no pude poner el botón a la derecha*/
+    color: black;
+    font-weight: bold;
+}
+
+.formulario-contacto button:hover {
+    background-color: green;
+    color: white;
+}
+
+.direccion{
+    opacity: 0.7;
+    font-size:x-small;
+}
+
+.social-icon {
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.social-icon.facebook {
+  color: #3b5998;
+}
+
+/* puntos de interrupción */
+  @media (max-width: 320px) {
+    .opiniones p {
+      font-size: clamp(0.5rem,5vw,1rem);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .opiniones {
+      font-size: clamp(0.5rem,10vw,1rem);
+    }
+  }
+
+footer {
+  background-color: orange;
+  text-align: center;
+}
